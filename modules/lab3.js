@@ -14,17 +14,18 @@ class Lab3Controller {
         const query = parsedUrl.query;
 
         try {
-            if (pathname.includes('/getDate')) {
+            if (pathname.includes('/comp4537/labs/3/getDate')) {
                 await this.handleGetDate(query, res);
-            } else if (pathname.includes('/writeFile')) {
+            } else if (pathname.includes('/comp4537/labs/3/writeFile')) {
                 await this.handleWriteFile(query, res);
-            } else if (pathname.includes('/readFile')) {
+            } else if (pathname.includes('/comp4537/labs/3/readFile')) {
                 await this.handleReadFile(res);
             } else {
                 this.sendError(res, messages.errorMessage);
             }
         } catch (error) {
             this.sendError(res, messages.errorMessage);
+            this.sendError(res, messages.errorMessage, 500);
         }
     }
 
