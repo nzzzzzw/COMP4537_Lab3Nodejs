@@ -4,7 +4,7 @@ class Messages {
         this.errorMessage = '404, there was an error processing your request';
         this.fileError = '500, there was a problem accessing the file!';
         this.writeSuccess = 'Text was successfully written to the file.';
-        this.fileNotFound = '404: file.txt not found';
+        this.fileNotFound = '404: %s not found';
     }
 }
 module.exports = new Messages();
